@@ -1,5 +1,7 @@
 dist
-out
 node_modules
+image2ascii-linux
+image2ascii-macos
+image2ascii-win.exe
 *.jpg
 *.txt
