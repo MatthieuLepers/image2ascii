@@ -1,0 +1,22 @@
+{
+  "name": "image2asciiart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "author": "Matthieu LEPERS",
+  "license": "ISC",
+  "scripts": {
+    "start": "npx ts-node src/index.ts -i flambino-1.jpg -o",
+    "build": "tsc --project ./tsconfig.json"
+  },
+  "dependencies": {
+    "jimp": "^0.22.12"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "bin": {
+    "image2ascii": "src/index.js"
+  }
+}
