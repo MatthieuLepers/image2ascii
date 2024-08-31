@@ -2,21 +2,10 @@ import Jimp from 'jimp';
 import fs from 'fs';
 import data from './data';
 
-let currentArgs: string = '';
-const args: Record<string, string[]> = process.argv.reduce((acc: Record<string, string[]> = {}, val) => {
-  if (val.startsWith('-')) {
-    currentArgs = val.substring(1);
-  } else {
-    if (!acc[currentArgs]) {
-      acc[currentArgs] = [];
-    }
-    acc[currentArgs].push(val);
-  }
-  return acc;
-}, {});
+const [, , src, dest] = process.argv;
 
 Jimp
-  .read(args.i[0])
+  .read(src)
   .then((image) => {
     const greyScaleImg = image.greyscale().contrast(1);
 
@@ -38,7 +27,11 @@ Jimp
       result += '\n';
     }
 
-    fs.writeFileSync('out.txt', result);
+    if (dest) {
+      fs.writeFileSync(dest, result);
+    } else {
+      fs.writeFileSync('out.txt', result);
+    }
     console.log(result);
   })
   .catch(console.error)
