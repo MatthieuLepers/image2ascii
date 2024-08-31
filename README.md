@@ -1,16 +1,3 @@
-# Installation
-
-Make sure you have NodeJS 16 installed
-
-```
-npm install
-npm run start my-picture.jpg result.txt
-```
-
-# Build
-
-`npm run build`
-
 # Usage
 
 ### Windows
@@ -33,3 +20,16 @@ Exemple:
 
 Exemple:
 `image2ascii-macos my-picture.jpg result.txt`
+
+# Installation
+
+Make sure you have NodeJS 16 installed
+
+```
+npm install
+npm run start my-picture.jpg result.txt
+```
+
+# Build
+
+`npm run build`
