@@ -6,17 +6,15 @@
   "author": "Matthieu LEPERS",
   "license": "ISC",
   "scripts": {
-    "start": "npx ts-node src/index.ts -i flambino-1.jpg -o",
-    "build": "tsc --project ./tsconfig.json"
+    "start": "npx ts-node src/index.ts",
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=out/image2ascii.js"
   },
   "dependencies": {
     "jimp": "^0.22.12"
   },
   "devDependencies": {
+    "esbuild": "^0.23.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
-  },
-  "bin": {
-    "image2ascii": "src/index.js"
   }
 }
