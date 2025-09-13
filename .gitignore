@@ -1,7 +1,17 @@
-dist
-node_modules
 image2ascii-linux
 image2ascii-macos
 image2ascii-win.exe
 *.jpg
 *.txt
+# Logs
+logs
+*.log*
+
+node_modules
+dist
+build
+out
+*.local
+*.sqlite
+*.sqlite3
+**/.DS_Store
